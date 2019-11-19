@@ -1,0 +1,27 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import scipy.stats as ss
+
+Rozkład normalny
+ss.norm.pdf(mean,std,x) - funkcja gęstości
+ss.norm.cfd(mean,std,x) - dystrybuanta
+ss.norm.ppf(mean,std,p) - kwantyl
+
+Losowanie n liczb z rozkładu normalnego
+X=np.random.normal(mean,std,n)
+Średnia 
+X.mean()
+Odchylenie standardowe
+X.mean(ddof=1)
+
+Tworzenie listy
+np.array([i for i in range(n)])
+
+Zastosowanie funkcji do listy
+vfun=np.vectorize(ss.norm.ppf)
+vfun(x)
+
+Tworzenie wykresu
+plt.plot(array)
+plt.show()
